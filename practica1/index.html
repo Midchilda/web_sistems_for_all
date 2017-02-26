@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="author" content="Daniel Luje">
+<meta name="author" content="Henry Yanchapanta">
+<meta charset="UTF-8">
+<link id="estilo" rel="stylesheet" type="text/css" href="default.css">
+<title>mi primera pagina web</title>
+</head>
+<body>
+<h1>Ejercicio 1</h1>
+<p>Primero haremos una <a href="colores.html">prueba de colores</a></p>
+<p>despues apuntamos a saludos  <a href="saludo.php?num=10">saludos 10</a>, 
+<a href="saludo.php?num=42">saludos 42</a>,
+<a href="saludo.php?num=100">saludos 100</a>, <a href="saludo.php?num=150">saludos 1500</a></p>
+<button onclick="cambiarCSS('verde.css')">verde</button>
+<button onclick="cambiarCSS('marron.css')">marron</button>
+<button onclick="cambiarCSS('consola.css')">consola</button>
+<script type="text/javascript">
+function cambiarCSS(nuevo){
+document.getElementById('estilo').setAttribute('href', nuevo);
+}</script>
+
+
+</body>
+
+
+</html>
