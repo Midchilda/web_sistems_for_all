@@ -1,0 +1,85 @@
+body{ 
+background: url(../img/perfil.png) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+img.usuario{
+    width: 90px;
+    height: 90px;
+    float: right;
+    margin-right: -30%;		
+    margin-top: 3%;
+}
+p.usuario{
+	float: right;
+    margin-top: 1%;
+    margin-right: -30%;	
+}
+
+img.logo{
+    width: 175px;
+    height: 175px;
+    margin-left: -1%;
+}
+
+.contenedor {
+    width: 968px;
+}
+
+.cuerpo {
+    clear: both;  
+    background: #8CD4F2;
+    padding: 1px 20px 5px 40px;
+    margin-top: 5%;
+    margin-left: 35%;
+    border-radius: 10px;
+    border: 1px solid CornflowerBlue;
+    width: 60%;
+    height: 63%;
+    text-align: left;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.cuerpo h1{
+    color: #3870A3;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.align{
+    display: block;
+    width: 170px;
+    float: left;
+}
+
+.cuerpo div{
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left:40px;
+}
+
+.validar{
+    width: 30%;
+    background-color:coral;
+    color: white;
+    font-size: 16px;
+    margin-left: 35%;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom:15px;
+}
+
+.footer {
+	height: 50px;
+	width: 100%;
+    background-color: #000010;
+    color: white;
+    text-align: center;
+	margin-top: 20px;
+}

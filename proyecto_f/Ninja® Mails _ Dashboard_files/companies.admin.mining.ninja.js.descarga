@@ -1,0 +1,66 @@
+    function loadCompanies(index){
+
+         $.ajax({
+              type: "GET",
+              url: CEUserver+"/contactme/rest/metrics/companies/"+index+"/BECOMEANINJA",
+              contentType: "application/json",
+              async:true,
+              success: function(data){
+
+                if(data.code == 1){
+
+                    //Load List   
+                    $("#companiesTableContent tr").remove();
+
+                    $.each(data.list, function(index, company) {
+
+
+                        $('#companiesTableContent').append(
+
+
+                            "<tr>"+
+                                "<td>"+ company.companyId +"</td>"+
+                                "<td id='"+company.companyId+"' class='fullcompanyname'>"+ company.companyName +"</td>"+
+                                "<td id='country_"+company.companyId+"'>"+company.countryCode +"</td>"+
+                              //  "<td>"+ company.companyName +"</td>"+
+                                "<td id='mainDomains_"+company.companyId+"'><span>Unknown</span></td>"+
+                                "<td id='AltDomains_"+company.companyId+"'><span>Unknown</span></td>"+
+                                "<td id='patterns_"+company.companyId+"'><span>Unknown</span></td>"+
+                                "<td id='contacts_"+company.companyId+"'><span>Unknown</span></td>"+
+                                "<td id='providers_"+company.companyId+"'><span>Unknown</span></td>"+
+                                "<td>"+company.cost+" € </td>"+
+
+                            "</tr>"
+                        );  
+
+                    var mainDomains = company.mainDomains;
+                    iterateMainDomains(mainDomains,company.companyId);   
+
+                    var altdomains = company.alternativeDomains;
+                    iterateAlternativeDomains(altdomains,company.companyId);  
+
+                    var patterns = company.patterns;
+                    var patternsProviders = company.patternsProviders;
+                    iteratePattern(patterns,patternsProviders,company.companyId);  
+
+                    var contacts = company.contacts;
+                    iterateContacts(contacts,company.companyId);
+
+                    var providers = company.providers;
+                    var providersNeeded = company.providersNeeded;
+                    iterateProviders(providers,providersNeeded,company.companyId);
+
+
+                    });
+                    
+                    $("#companiesTableContent span").tooltip();
+
+                }
+            },
+        
+            }).fail(function(){
+
+                warningNotification();
+
+            });        
+    }

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            YourHealth
+        </title>
+        <link href="YourHealthIco.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="css/gestion.css" rel="stylesheet" type="text/css"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <!-- Latest compiled and minified CSS -->
+        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
+        <!-- Optional theme -->
+        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" rel="stylesheet"/>
+        <!-- Latest compiled and minified JavaScript -->
+        <script crossorigin="anonymous" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+        </script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    </head>
+    <body>
+        <header>
+            <div class="cabecera">
+                <div class="avatar">
+                    <!--<a href = "Datos.html">-->
+                    <img class="avatar" src="img/usuario.png">
+                        <!--Log out</a>-->
+                        <p class="avatar">
+                            Hola "usuario "
+                            <a href="desconectarse.html">
+                                Desconectate
+                            </a>
+                        </p>
+                    </img>
+                </div>
+                <div class="titulo">
+                    <!--<a href="index.html">-->
+                    <img class="titulo" src="img/YourHealth.png">
+                        <!--</a>-->
+                    </img>
+                </div>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                Conócenos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Nuestro Centro
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Cuadro Médico
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Servicios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Atención Primaria
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Actividades
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Lista Quirúrjica
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                + Información
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section>
+            <div class="listainformes">
+                <div class="list-title">
+                    <h2>
+                        Lista Informes
+                    </h2>
+                </div>
+                <!-- fiter.-->
+                <div class="search-report">
+                    <div>
+                        <form>
+                            <label>
+                                Palabra clave:
+                            </label>
+                            <input class="search" placeholder="Introducir palabra clave, nombre, especialidad,medico" required="" type="text"/>
+                            <button class="button button-cita">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+                    <!--table-->
+                    <div class="table">
+                        <!--table-head -->
+                        <div class="table-row">
+                            <div class="table-head">
+                                <span>
+                                    Historial
+                                </span>
+                            </div>
+                            <div class="table-head">
+                                <span>
+                                    Paciente
+                                </span>
+                            </div>
+                            <div class="table-head">
+                                <span>
+                                    Médico
+                                </span>
+                            </div>
+                            <div class="table-head">
+                                <span>
+                                    Especialidad
+                                </span>
+                            </div>
+                            <div class="table-head">
+                                <span>
+                                    Fecha
+                                </span>
+                            </div>
+                            <div class="table-head">
+                                <span>
+                                </span>
+                            </div>
+                            <div class="table-head">
+                                <span>
+                                    Descripción
+                                </span>
+                            </div>
+                        </div>
+                        <!--rows-->
+                        <!--row1-->
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <a href="#">
+                                    HCP-2357
+                                </a>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    Akira Suzuki
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    John Smith
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    Traumatologia
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    15/04/2017 12:30
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <button class="button button-cita modify" title="Modificar Cita">
+                                    <i class="fa fa-eye mod-icon">
+                                        Open
+                                    </i>
+                                </button>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    Resonancia magnética abierta de dos zonas con IT Viamed
+                                </span>
+                            </div>
+                        </div>
+                        <!--fin row1-->
+                        <!--row2-->
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <a href="#">
+                                    HCP-2357
+                                </a>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    Akira Suzuki
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    John Smith
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    Traumatologia
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    16/04/2017 12:30
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <button class="button button-cita modify" title="Modificar Cita">
+                                    <i class="fa fa-eye mod-icon">
+                                        Open
+                                    </i>
+                                </button>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    Radiografia Rostrocaudal en cráneo
+                                </span>
+                            </div>
+                        </div>
+                        <!--fin row2-->
+                        <!--row3-->
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <a href="#">
+                                    HCP-7532
+                                </a>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    James Simmmons
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    John Smith
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    Traumatologia
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    15/04/2017 13:30
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <button class="button button-cita modify" title="Modificar Cita">
+                                    <i class="fa fa-eye mod-icon">
+                                        Open
+                                    </i>
+                                </button>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    Radiografía de contraste...
+                                </span>
+                            </div>
+                        </div>
+                        <!--fin row3-->
+                        <!--row4-->
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <a href="#">
+                                    HCP-7532
+                                </a>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    James Simmons
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    John Smith
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    Traumatologia
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    17/04/2017 15:30
+                                </span>
+                            </div>
+                            <div class="table-cell">
+                                <button class="button button-cita modify" title="Modificar Cita">
+                                    <i class="fa fa-eye mod-icon">
+                                        Open
+                                    </i>
+                                </button>
+                            </div>
+                            <div class="table-cell">
+                                <span>
+                                    Radiografía laterolateral izquierda...
+                                </span>
+                            </div>
+                        </div>
+                        <!--fin row4-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="pie">
+                <p>
+                    pie de pagina
+                </p>
+            </div>
+        </footer>
+        <script src="jquery-3.1.1.min.js" type="text/javascript">
+        </script>
+        <script src="gestioncitas.js" type="text/javascript">
+        </script>
+    </body>
+</html>

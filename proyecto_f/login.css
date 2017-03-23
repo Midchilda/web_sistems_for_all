@@ -1,0 +1,58 @@
+body{
+background: url(img/fondo.png) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+
+.contenedor {
+    width: 968px;
+}
+
+.cuerpo {
+    clear: both;  
+    background: #8CD4F2;
+    padding: 1px 20px 5px 40px;
+    margin-top: 40%;
+    margin-left: 67%;
+    border-radius: 10px;
+    border: 1px solid CornflowerBlue;
+    width: 60%;
+    text-align: left;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.cuerpo h1{
+    color: #3870A3;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.align{
+    display: block;
+    width: 170px;
+    float: left;
+}
+
+.cuerpo div{
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left:40px;
+}
+
+.validar{
+    width: 30%;
+    background-color:coral;
+    color: white;
+    font-size: 16px;
+    margin-left: 35%;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom:15px;
+}

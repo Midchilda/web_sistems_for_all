@@ -1,0 +1,429 @@
+/* ---- CUERPO GENERAL ------ */
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body{ 
+background: url(img/fondo.png) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+
+/* ---- CABECERA ---- */
+
+.header {
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+   
+    margin-bottom: 50px;
+}
+
+
+/*img.logo{
+    width: 175px;
+    height: 175px;
+    margin-left: -1%;
+}*/
+
+
+/*-------- LOGO -------*/
+
+img.logo {
+    width: 180px;
+    height: 180px;
+    
+}
+
+.titulo {
+    margin-bottom: 50px;
+
+}
+
+
+/*--------------------*/
+
+.header nav {
+    margin-left: 4%;
+    width: 100%;
+    margin-right: -4%;
+    margin-top: 20px;
+    /*---***********************************--*/
+}
+
+.header ul {
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+    background-color: #8CD4F2;
+    border: 1px solid #1E90FF;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.header li {
+    float: left;
+}
+
+.header li a {
+    display: block;
+    width: 100%;
+    padding: 10px 46.1px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #1E90FF;
+}
+
+.header li a.active {
+    background-color: #00ccff;
+    color: white;
+}
+
+.header li a:hover:not(.active) {
+    background-color: #AFEEEE;
+    color: blue;
+}
+
+
+/* ----- CUERPO/CONTENIDO --------*/
+
+.cuerpo {
+    margin-left: 5%;
+    margin-right: -5%;
+    width: 100%;
+    margin-top: 50px;
+    /*--**************************---*/
+    margin-bottom: 50px;
+    opacity: 0.85;
+}
+
+.cuerpoplanf {
+    height: 480px;
+    margin-left: 5%;
+    width: 100%;
+    margin-top: 25%;
+    /*--**************************---*/
+    margin-bottom: 10%;
+    opacity: 0.85;
+}
+
+.indice {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 100%;
+    height: 63%;
+    text-align: justify;
+    font-size: 17px;
+}
+
+.detalles {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 100%;
+    height: 63%;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.Planificacion {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 100%;
+    height: 54%;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.contacto {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 100%;
+    height: 63%;
+    text-align: left;
+    font-size: 15px;
+}
+
+.contacto .align {
+    display: block;
+    width: 170px;
+    float: left;
+}
+
+.contacto div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/*miembros.html*/
+
+.miembros {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.button {
+    font-size: 1em;
+    padding: 5px;
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 10px/25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover {
+    background: #8CD4F2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+
+/*fin miembros*/
+
+.usuarios {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 10px 5px 10px;
+    margin-left: 18%;
+    margin-top: 2%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 118%;
+    height: 43%;
+    text-align: justify;
+}
+
+.usuarios li {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.usuarios li h4 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Planificacion li {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.Planificacion li h4 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.footer img {
+    width: 90px;
+    height: 40px;
+}
+
+img.fotoCuerpo {
+    width: 350px;
+    height: 350px;
+    margin-top: -48%;
+    margin-left: 58%;
+}
+
+
+/* ----- PIE DE PÁGINA ------ */
+
+.footer {
+    width: 100%;
+    background-color: #000010;
+    color: white;
+    padding: 0px 0 40px;
+    text-align: center;
+    
+    bottom: 0;
+}
+
+
+/*----BOCETOS----*/
+
+.bocetos {
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-top: 50px;
+    margin-right: -20%;
+    margin-left: 10%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 15px;
+}
+
+img.img-boc {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+img.img-over {
+    max-height: 1000px;
+    margin-left: 10%;
+    max-width: 1000px;
+}
+
+.boc-head {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.boc-head ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8CD4F2;
+}
+
+.boc-head li {
+    float: left;
+}
+
+.boc-head li a {
+    display: block;
+    border: 1px solid CornflowerBlue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.boc-head li a:hover:not(.active) {
+    background-color: #AFEEEE;
+    color: blue;
+}
+
+.boc-head li a.active {
+    background-color: #00ccff;
+    color: white;
+}
+
+.boc-body {
+    margin: 10px auto;
+    clear: left;
+}
+
+.zoom-img {
+    margin: 10px auto;
+    width: 200px;
+    height: 200px;
+}
+
+.zoom {
+    float: left;
+    /* must be floated for same cross browser position of larger image */
+    position: relative;
+    margin: 3px;
+}
+
+.zoom img {
+    border: 1px solid #000;
+    vertical-align: bottom;
+}
+
+.zoom:hover {
+    border: 0;
+    /* IE6 needs this to show large image */
+    z-index: 1;
+}
+
+.zoom span {
+    position: absolute;
+    visibility: hidden;
+}
+
+.zoom:hover span {
+    visibility: visible;
+    top: -400px;
+    left: -400px;
+}

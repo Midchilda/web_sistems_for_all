@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>YourHealth</title>
+        <link rel="shortcut icon" type="image/x-icon" href="img/YourHealthIco.ico" />
+        <link rel="stylesheet" type="text/css" href="cssDatos.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+	<div class="contenedor">
+           <div class="menu">
+                <img class="logo" src="img/YourHealth.png">
+                <img class= "usuario" src="img/usuario.png">
+                <p class = "usuario"> Hola "usuario"<a href="desconectarse.html">Desconectate</a></p>
+           </div>
+
+		<div class = "cuerpo">
+			<div class="pestanas">
+				<ul>
+					<li><a href="Datos.html">Datos</a></li>
+					<li><a href="citasPaciente.html">Citas</a></li>
+					<li><a href="informes.html">Informes</a></li>
+					<li><a href="pedirCitas.html">Citate</a></li>
+				</ul>
+			</div>
+			<div class="contenidopestanas">
+				<h1>Tus datos</h1>
+				<div class="datos">Nombre Apellido</div>
+				<div class="datos">Sexo</div>
+				<div class="datos">Fecha nacimiento</div>
+				<div class="datos">Telefono</div>
+				<div class="datos">Correo electronico</div>
+				<div class="datos">Direccion</div>
+				<div class="datos">Estado civil</div>
+				<div class="datos">Numero seguro social</div>
+						
+				<button onclick="window.location.href='Modif_perfil.html';" class="modif_datos">Modificar mis datos</button>
+
+			</div>
+		</div>
+	</div>
+	<!--Pie de las páginas (En todas las páginas)-->
+	<div class = "footer">
+		<p>Copyright</p>
+	</div>
+  </body> 
+</html> 

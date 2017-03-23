@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+	<title>Registro</title>
+        <link rel="stylesheet" type="text/css" href="registro.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</head> 
+<body> 
+	
+	<div class="contenedor">
+            <div class="menu">
+                <img class= "usuario" src="img/usuario.png">
+                <p class = "usuario">"usuario" <a href="desconectarse.html">Logearse</a></p>
+            </div>
+	    <div class="cuerpo">
+
+		<h1> REGISTRAR </h1>
+
+		<form method="post" action="traitement.php">
+	
+		<div>
+		    <label for="nombre" class="align">Nombres :</label>
+		    <input type="text" id="nombre" name="nombre" placeholder="Introducir Nombres" required/>
+		</div>
+
+		<div>
+		    <label for="apellido" class="align">Apellidos :</label>	
+		    <input type="text" id="apellido" name="apellido" placeholder="Introducir Apellidos" required/>
+		</div>
+
+		<div>
+		    <label for="sexo_H" class="align">Sexo : </label>
+		    <input type="radio" id="sexo_H" name="sexo" value="sexo_H" /> <label for="sexo_H">Hombre</label>
+		    <input type="radio" id="sexo_M" name="sexo" value="sexo_M" id="sexo_H" /> <label for="sexo_M">Mujer</label>
+		</div>
+
+		<div>
+		    <label for="dni" class="align">DNI : </label>
+		    <input type="text" id="dni" name"dni" placeholder="Introducir DNI" required/>
+		</div>
+
+		<div>
+		    <label for="fecha_nacimiento" class="align">Fecha nacimiento :</label>
+		    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required/>
+		</div>
+ 
+		<div>
+		    <label for="telefono" class="align">Teléfono :</label>
+		    <input type="tel" id="telefono" name="telefono" placeholder="Introducir Teléfono" required/>
+		</div>
+
+		<div>
+		    <label for="email_addr" class="align">Correo electrónico :</label>
+		    <input type="email" id="email_addr" name="email_addr" placeholder="Introducir Correo" required/>
+		</div>
+
+		<div>
+		    <label for="direccion" class="align">Dirección :</label>
+		    <input type="text" id="direccion" name="direccion" placeholder="Introducir Dirección"required/>
+		</div>
+		
+		<div>
+		    <label for="poblacion_nom" class="align">Población:</label>
+		    <input type="poblacion_nom" id="poblacion_nom" name="poblaciom_nom" list="poblacion" placeholder="Seleccionar Población" required/>
+		    <datalist id="poblacion">
+                <option value="Madrid">
+                <option value="Barcelona">   
+                <option value="Alicante">
+                <option value="Zaragoza">
+            </datalist>
+		</div>
+		
+		<div>
+		    <label for="cod_postal" class="align">Codigo Postal:</label>
+		    <input type="cod_postal" id="cod_postal" name="cod_postal" placeholder="Introducir Codigo Postal" required/>
+		</div>
+
+		<div>
+		    <label for="num_seg_social" class="align">Número de afiliado :</label>
+		    <input type="text" id="num_seg_social" name="num_seg_social" placeholder="Introducir Numero Afiliado" required/>
+		</div>
+
+ 
+		<div>
+		    <label for="contraseña" class="align">Contraseña:</label>
+		    <input type="password" id="contraseña" name="contraseña" placeholder="Introducir Contraseña" required/>
+		</div>
+		
+		<div>
+		    <label for="repcontraseña" class="align">Repetir Contraseña:</label>
+		    <input type="password" id="repcontraseña" name="repcontraseña" placeholder=" Repetir Contraseña" required/>
+		</div>
+
+		</form>
+ 
+		<input type="submit" value="Registrar" class="validar" onclick="window.location.href='Datos.html';"/>
+	    </div>
+	</div>
+</body>
+</html>

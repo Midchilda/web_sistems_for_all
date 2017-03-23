@@ -1,0 +1,240 @@
+
+    //COMMON.
+   // var server="http://ninjamailsserver.com:8080/contactme/rest/";
+    //var payments ="http://ninjamailsserver.com:8080/ninjapayments/rest/";
+
+var server="https://ninjamailsserver.com:8443/contactme/rest/";
+var payments ="https://ninjamailsserver.com:8443/ninjapayments/rest/";
+    //Launch warning notification
+    function warningNotification(){
+
+        toastr.options = {
+          "closeButton": true,
+          "debug": false,
+          "progressBar": true,
+          "preventDuplicates": true,
+          "positionClass": "toast-top-right",
+          "onclick": null,
+          "showDuration": "400",
+          "hideDuration": "1000",
+          "timeOut": "7000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+        };
+    
+        toastr.warning(getMessageCorrectLang("Unexpected error. Please 'logout' and try it again in a few minutes."), getMessageCorrectLang("Ooops! "));
+    }
+
+    //Launch warning notification
+    function errorNotification(message){
+
+        toastr.options = {
+          "closeButton": true,
+          "debug": false,
+          "progressBar": true,
+          "preventDuplicates": true,
+          "positionClass": "toast-top-right",
+          "onclick": null,
+          "showDuration": "400",
+          "hideDuration": "1000",
+          "timeOut": "7000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+        };
+    
+        toastr.error(getMessageCorrectLang(message), getMessageCorrectLang("Ooops! "));
+    }
+
+    //Launch a custom warning.
+    function notice(message){
+
+                toastr.options = {
+                  "closeButton": true,
+                  "debug": false,
+                  "progressBar": true,
+                  "preventDuplicates": true,
+                  "positionClass": "toast-top-right",
+                  "onclick": null,
+                  "showDuration": "400",
+                  "hideDuration": "1000",
+                  "timeOut": "7000",
+                  "extendedTimeOut": "1000",
+                  "showEasing": "swing",
+                  "hideEasing": "linear",
+                  "showMethod": "fadeIn",
+                  "hideMethod": "fadeOut"
+                };
+            
+                toastr.warning(getMessageCorrectLang(message), getMessageCorrectLang("Ooops! "));
+      }
+
+    //Launch a custom warning.
+    function successNotification(message){
+
+                toastr.options = {
+                  "closeButton": true,
+                  "debug": false,
+                  "progressBar": true,
+                  "preventDuplicates": true,
+                  "positionClass": "toast-top-right",
+                  "onclick": null,
+                  "showDuration": "400",
+                  "hideDuration": "1000",
+                  "timeOut": "7000",
+                  "extendedTimeOut": "1000",
+                  "showEasing": "swing",
+                  "hideEasing": "linear",
+                  "showMethod": "fadeIn",
+                  "hideMethod": "fadeOut"
+                };
+            
+                toastr.success(getMessageCorrectLang(message), getMessageCorrectLang("Yep! "));
+      }
+      //Logout
+      $("#logout").click(function(){
+
+          if($.removeCookie('ninja-cookie')){ //&& $.removeCookie('i18next')
+
+              window.location.replace("login.html");
+
+          }else{
+
+            warningNotification();
+          }
+
+      });
+
+      //GetTip
+     function getTip(tip,userId){
+
+        $.ajax({
+                url: server+"tips/"+tip+"/"+userId,
+                type: "GET",
+                async: false,
+                success: function(data) {
+                  
+                if(data.code == 1){
+
+                    launchtip(data.title,data.text);
+                }
+
+                },
+
+              }).fail(function(){
+
+                    warningNotification();
+
+              });
+          } 
+
+    //Launch a tip message.
+    function launchtip(title,message){
+
+      
+                toastr.options = {
+                  "closeButton": true,
+                  "debug": false,
+                  "progressBar": true,
+                  "preventDuplicates": true,
+                  "positionClass": "toast-top-right",
+                  "onclick": null,
+                  "showDuration": "400",
+                  "hideDuration": "1000",
+                  "timeOut": "7000",
+                  "extendedTimeOut": "1000",
+                  "showEasing": "swing",
+                  "hideEasing": "linear",
+                  "showMethod": "fadeIn",
+                  "hideMethod": "fadeOut"
+                };
+            
+                toastr.info(getMessageCorrectLang(message),getMessageCorrectLang(title));
+  }
+
+  $.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results==null){
+       return null;
+    }
+    else{
+       return results[1] || 0;
+    }
+}
+
+
+  //Client Validations
+
+   function isEmpty(value){
+        return !$.trim(value);
+   }
+
+  function isValidEmailAddress(emailAddress) {
+      var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+      return pattern.test(emailAddress);
+  }
+
+  function passwordValidation(password){
+
+    if(isEmpty(password)){
+
+        errorNotification("Password can not be empty");
+        return false;
+
+    }else{
+
+      if(password.length < 6){
+
+        errorNotification("Password is too short (6 chars needed)");
+        return false;
+      }
+
+      return true;
+
+    }
+  }
+
+  function emailValidation(email){
+
+    if(isEmpty(email)){
+
+        errorNotification("Email can not be empty");
+        return false;
+
+    }else{
+
+      if(isValidEmailAddress(email)){
+
+        return true;
+
+      }else{
+
+        errorNotification("It's not an email address");
+        return false;
+
+      }
+
+    }
+
+  }
+
+  /*i18n.init(function(err, t) {
+
+     $(".nav").i18n();
+     $(".mailscommon").i18n();
+
+  }); */
+
+  //wait
+  $.wait = function(ms) {
+    var defer = $.Deferred();
+    setTimeout(function() { defer.resolve(); }, ms);
+    return defer;
+  };
+
+

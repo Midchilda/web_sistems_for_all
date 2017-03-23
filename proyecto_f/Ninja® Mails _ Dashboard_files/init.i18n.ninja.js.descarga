@@ -1,0 +1,192 @@
+
+    i18n.init(function(err, t) {
+
+        var v = $("[data-i18n]");
+
+        for (i = 0; i < v.length; i++) {
+            var key_i18n = $(v[i]).attr("data-i18n");
+            var tagName = $(v[i]).prop("tagName");
+
+            if (tagName == "INPUT") {
+                $("[data-i18n=\'" + key_i18n + "\']").attr("placeholder",i18n.t(key_i18n));
+            } else {
+                $("[data-i18n=\'" + key_i18n + "\']").html(i18n.t(key_i18n));
+            }
+
+        }
+
+    });
+
+function loadI18n() {
+
+    i18n.init(function(err, t) {
+
+        var v = $("[data-i18n]");
+
+        for (i = 0; i < v.length; i++) {
+            var key_i18n = $(v[i]).attr("data-i18n");
+            var tagName = $(v[i]).prop("tagName");
+
+            if (tagName == "INPUT") {
+                $("[data-i18n=\'" + key_i18n + "\']").attr("placeholder",i18n.t(key_i18n));
+            } else {
+                $("[data-i18n=\'" + key_i18n + "\']").html(i18n.t(key_i18n));
+            }
+
+        }
+
+    });
+/*
+    if (htmlPage == "mail_compose") {
+
+        alert($("#template-select").children().html());
+
+        $("#template-select").children().each(function(index) {
+
+            //$("#chosen-results").get(index).html($(this).html());
+
+        });
+
+    }
+*/
+}
+
+function getMessageCorrectLang(message) {
+
+    switch(message) {
+
+        // COMMON (NINJA.JS)
+        case "Unexpected error. Please 'logout' and try it again in a few minutes.": return i18n.t("popup.error");
+            break;
+        case "Ooops! ": return i18n.t("popup.ooops");
+            break;
+        case "Yep! ": return i18n.t("popup.yep");
+            break;
+        case "Password can not be empty": return i18n.t("popup.emptyPassword");
+            break;
+        case "Password is too short (6 chars needed)": return i18n.t("popup.shortPassword");
+            break;
+        case "Email can not be empty": return i18n.t("popup.emptyEmail");
+            break;
+        case "It's not an email address": return i18n.t("popup.wrongFormatEmail");
+            break;
+
+        //LOGIN
+        case "Be Happy ;)": return i18n.t("popup.behappy");
+            break;
+        case "Wrong password": return i18n.t("popup.wrongPassword");
+            break;
+        case "Please check your email to activate your account.": return i18n.t("popup.notActivate");
+            break;
+        case "This user doesn't exists": return i18n.t("popup.wrongUser");
+            break;
+        case "Wrong email or password": return i18n.t("popup.wrongEmailPassword");
+            break;
+
+        //REGISTER
+        case "Please check your email and then click the activation link to validate your account.": return i18n.t("popup.emailRegistered");
+            break;
+        case "This email is already registered to another account": return i18n.t("popup.emailRepeated");
+            break;
+        case "Not a valid email or password": return i18n.t("popup.notValid");
+            break;
+
+        //FORGOT
+        case "Check your email": return i18n.t("popup.checkEmail");
+            break;
+        case "Wrong email": return i18n.t("popup.wrongEmail");
+            break;
+            
+        //MAIL_COMPOSE
+        case "Ninja Mail sent!": return i18n.t("popup.ninjamailsent");
+            break;
+        case "Recipient's name needed": return i18n.t("popup.nameneeded");
+            break;
+        case "Recipient's company needed": return i18n.t("popup.companyneeded");
+            break;
+        case "No valid characters (detected in Name or Company values)": return i18n.t("popup.wrongNameCompany");
+            break;
+        case "'Reply to' mail is not valid": return i18n.t("popup.replytoInvalid");
+            break;
+        case "Subject needed": return i18n.t("popup.subjectNeeded");
+            break;
+        case "Message needed": return i18n.t("popup.messageNeeded");
+            break;
+        case "Full Name": return i18n.t("popup.name_title");
+            break;
+        case "Please include last name!": return i18n.t("popup.name_text");
+            break;
+        case "Company name": return i18n.t("popup.company_title");
+            break;
+        case "Please type the company’s full name, brand, or web domain!": return i18n.t("popup.company_text");
+            break;
+        case "Try using your company email!": return i18n.t("popup.replyto_title");
+            break;
+        case "Using your company email will have a better chance of getting a response!": return i18n.t("popup.replyto_text");
+            break;
+        case "Your Name!": return i18n.t("popup.yourname_title");
+            break;
+        case "Using your name will have a better chance of getting a response!": return i18n.t("popup.yourname_text");
+            break;
+
+        //PAYMENTS
+        case "This code expired.": return i18n.t("popup.codeExpired");
+            break;
+        case "This code is not valid.": return i18n.t("popup.codeInvalid");
+            break;
+        case "Contact us asap!": return i18n.t("popup.contactUS");
+            break;
+        case "You cant use this special dial again": return i18n.t("popup.codeRepeated");
+            break;
+        case "Payment was cancelled": return i18n.t("popup.paymentCancelled");
+            break;
+        case "Try again in few minutes": return i18n.t("popup.tryAgain");
+            break;
+        case "Firstname can not be empty": return i18n.t("popup.firstNameEmpty");
+            break;
+        case "Lastname can not be empty": return i18n.t("popup.lastNameEmpty");
+            break;
+        case "Expiry Month can not be empty": return i18n.t("popup.monthEmpty");
+            break;
+        case "Wrong Month format MM (ie: Jan -> 01)": return i18n.t("popup.wrongMonth");
+            break;
+        case "Expiry Year can not be empty": return i18n.t("popup.yearEmpty");
+            break;
+        case "Wrong Year format YYYY (ie: 2016 -> 2016)": return i18n.t("popup.wrongYear");
+            break;
+        case "CVC Code can not be empty": return i18n.t("popup.cvcEmpty");
+            break;
+        case "Wrong CVC format: 3-4 digit": return i18n.t("popup.wrongCVC");
+            break;
+        case "Card number can not be empty": return i18n.t("popup.cardNumberEmpty");
+            break;
+        case "Wrong Card number: Use only the group numbers separated by spaces": return i18n.t("popup.wrongCardNumber");
+            break;
+        case "'Company Name' can not be empty": return i18n.t("popup.companyEmpty");
+            break;
+        case "'DNI/NIF' can not be empty": return i18n.t("popup.dninifEmpty");
+            break;
+        case "'Full Name' can not be empty": return i18n.t("popup.fullNameEmpty");
+            break;
+        case "'Address' can not be empty": return i18n.t("popup.addressEmpty");
+            break;
+        case "'Country' can not be empty": return i18n.t("popup.countryEmpty");
+            break;
+        case "'Zip Code' can not be empty": return i18n.t("popup.zipcodeEmpty");
+            break;
+        case "Wrong zip code": return i18n.t("popup.wrongZipcode");
+            break;
+        case "'Zip Code' is not a number": return i18n.t("popup.zipcodeWrongFormat");
+            break;
+        case "Must select natural person or legal entity": return i18n.t("popup.selectOption");
+            break;
+
+        //SETTINGS
+        case "Done ;)": return i18n.t("popup.done");
+            break;
+
+        default:
+            return "*" + message + "*";
+    }
+
+}

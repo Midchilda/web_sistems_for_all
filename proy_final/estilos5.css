@@ -1,0 +1,402 @@
+/* ---- CUERPO GENERAL ------ */
+html{
+     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+}
+body {
+    background-image: url("img/fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.contenedor {
+    width: 968px;
+}
+
+/* ---- CABECERA ---- */
+
+.header {
+    height: 52px;
+    width: 978px;
+}
+
+/*-------- LOGO -------*/
+
+img.titulo {
+    width: 180px;
+    height: 180px;
+}
+
+.titulo {
+    float: center;
+    margin-left: 60%;
+    margin-top: 1%;
+    width: 40%;
+}
+
+/*--------------------*/
+
+.header nav {
+    margin-left: 20.5%;
+    width: 105.6%;
+    margin-top: 3%;
+}
+
+.header ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #8CD4F2;
+    border: 1px solid #1E90FF;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.header li {
+    float: left;
+}
+
+.header li a {
+    display: block;
+    padding: 10px 46.1px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #1E90FF;
+}
+
+.header li a.active {
+    background-color: #00ccff;
+    color: white;
+}
+
+.header li a:hover:not(.active) {
+    background-color: #AFEEEE;
+    color: blue;
+}
+
+
+/* ----- CUERPO/CONTENIDO --------*/
+
+.cuerpo {
+    height: auto;/*1100px; */
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 25%;
+    margin-bottom: 10%;
+    opacity: 0.85;
+}
+
+.indice {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 118%;
+    height: 63%;
+    text-align: justify;
+    font-size: 17px;
+}
+
+img.fotoCuerpo {
+    width: 350px;
+    height: 350px;
+    margin-top: 3%;
+    margin-left: 30%;
+}
+
+.detalles {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 118%;
+    height: 63%;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.Planificacion {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 118%;
+    height: 54%;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.contacto {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 118%;
+    height: 63%;
+    text-align: left;
+    font-size: 15px;
+}
+
+.contacto .align {
+    display: block;
+    width: 170px;
+    float: left;
+}
+
+.contacto div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/*miembros.html*/
+
+.miembros {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 118%;
+    height: 25%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.button {
+    font-size: 1em;
+    padding: 5px;
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 10px/25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover {
+    background: #8CD4F2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+
+/*fin miembros*/
+
+.usuarios {
+    clear: both;
+    background: #8CD4F2;
+    padding: 1px 10px 5px 10px;
+    margin-left: 18%;
+    margin-top: 2%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 118%;
+    height: 43%;
+    text-align: justify;
+}
+
+.usuarios li {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.usuarios li h4 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Planificacion li {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.Planificacion li h4 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/*----BOCETOS----*/
+.bocetos {
+    /*clear: both;*/
+    background: #8CD4F2;
+    padding: 1px 20px 5px 20px;
+    margin-left: 18%;
+    margin-right: -18%;
+    border-radius: 5px;
+    border: 2px solid CornflowerBlue;
+    width: 100%;
+    
+    text-align: center;
+    font-size: 15px;
+}
+
+.img-boc {
+    max-height: 200px;
+    max-width: 200px;
+}
+.img-over {
+    max-height: 1000px;
+    max-width: 1000px;
+}
+
+.boc-head {
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.boc-head ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8CD4F2;
+}
+
+.boc-head li {
+    float: left;
+}
+
+.boc-head li a {
+    display: block;
+    border: 1px solid CornflowerBlue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.boc-head li a:hover:not(.active) {
+    background-color: #AFEEEE;
+    color: blue;
+}
+
+.boc-head li a.active {
+    background-color: #00ccff;
+    color: white;
+}
+.boc-body{
+    /*margin:10px auto;
+    clear: left;*/
+    display: inline;
+}
+
+.foto{
+    width: 20%;
+    display: inline-block;
+    padding-left: 12px;
+    margin:2px 8px 2px 8px;
+}
+.zoom-img {
+    margin:10px auto;
+    width: 200px;
+    height: 200px;
+}
+
+.zoom {
+    float: left;
+    /* must be floated for same cross browser position of larger image */
+    position: relative;
+    margin: 3px;
+}
+
+.zoom img {
+    border: 1px solid #000;
+    vertical-align: bottom;
+}
+
+.zoom:hover {
+    border: 0;
+    /* IE6 needs this to show large image */
+    z-index: 1;
+}
+
+.zoom span {
+    position: absolute;
+    visibility: hidden;
+}
+
+.zoom:hover span {
+    visibility: visible;
+    top: -400px;
+    left: -400px;
+}
+
+/* ----- PIE DE PÁGINA ------ */
+
+.footer {
+    height: 70px;
+    width: 139%;
+    background-color: #000010;
+    color: white;
+    text-align: center;
+}
+.footer img {
+    width: 90px;
+    height: 40px;
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8"/>
+        <title>YourHealth</title>
+        <link rel="shortcut icon" type="image/x-icon" href="YourHealthIco.ico" />
+        <link rel="stylesheet" type="text/css" href="comun.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+         <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="header">
+                <a href="index.html">
+                <img class="titulo" src="YourHealth.png">
+                </a>
+                <nav>
+                <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="detalles.html">Detalles</a></li>
+                <li><a href="bocetos.html">Bocetos</a></li>
+                <li><a href="planificación.html">Planificación</a></li>
+                
+                <li><a href="miembros.html">Conócenos</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+                </nav>
+            </div>     
+            <div class="body">              
+                <div class="content gestion-citas">
+                    <div >
+                        <h2>
+                            Introduce un criterio de busqueda. El resultado se muestra abajo.
+                        </h2>
+                    </div>
+                    <!-- Buscador de pacientes, para mostrar sus citas pendientes.-->
+                    <div class="search-medico">
+                        <div>
+                        <form>
+                        <label>ID:</label>
+                        <input class="search" type="text" name="dni" placeholder="Nombre/Especialidad" required></input>
+                      
+                        <button class="button button-cita">Search</button> 
+                        </form>
+                        </div>
+                    </div>
+                    <!-- Tabla de medicos  y las posibles acciones a realizar (ver agenda,etc)-->
+                    <div class="doc-table" title="Se muestra un mensaje si no hay citas pendientes.">
+                    <div class="table" >
+                    <!--table-head -->
+                        <div class="table-row">
+                            <div class="table-head">
+                                <span>Especialidad</span>
+                            </div>
+                            <div class="table-head">
+                                <span>Médico</span>
+                            </div>
+                            <div class="table-head">
+                                <span>Consulta</span>
+                            </div>
+                             <div class="table-head">
+                                <span>Horario</span>
+                            </div>
+                            <div class="table-head">
+                                <span>Acciones</span>
+                            </div>
+                        </div>
+                    <!-- rows -->
+                        <!-- row 1-->
+                        <div class="table-row doc-row">
+                            <div class="table-cell">
+                                <span>Traumatología</span>
+                            </div>
+                            <div class="table-cell">
+                                <span>Doctor John Smith</span>
+                            </div>
+                            <div class="table-cell">
+                                <span>Planta 1, Sala A</span>
+                            </div>
+                            <div class="table-cell">
+                                <span>08:00-16:00</span>
+                            </div>
+                            <div class="table-cell">
+                                <div class="table-row">
+                                <div class="table-cell">
+                                     <button  class="button button-cita modify"  title="Modificar Cita"><i class="fa fa-eye mod-icon"> Agenda</i></button>
+                                </div>
+                               
+                                <div class="table-cell">
+                                     <button  class="button button-cita delete"  title="Nueva Cita"><i class="fa fa-medkit add-icon">Pedir Cita</i></button>
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                         <!-- row 2-->
+                        <div class="table-row doc-row">
+                            <div class="table-cell">
+                                <span>Dermatológía</span>
+                            </div>
+                            <div class="table-cell">
+                                <span>Doctor Héctor Gómez</span>
+                            </div>
+                            <div class="table-cell">
+                                <span>Planta 1, Sala R</span>
+                            </div>
+                            <div class="table-cell">
+                                <span>08:00-16:00</span>
+                            </div>
+                            <div class="table-cell">
+                                <div class="table-row">
+                                <div class="table-cell">
+                                    <button class="button button-cita modify"  title="Modificar Cita"><i class="fa fa-eye mod-icon"> Agenda</i></button>
+                                </div>
+                                <div class="table-cell">
+                                     <button  class="button button-cita delete"  title="Nueva Cita"><i class="fa fa-medkit add-icon">Pedir Cita</i></button>
+                                </div>
+                               
+                                </div>
+                            </div>
+                        </div>
+                         <!-- row 3-->
+                        <div class="table-row doc-row">
+                            <div class="table-cell">
+                                <span>Otorrinolaringología</span>
+                            </div>
+                            <div class="table-cell">
+                                <span>Doctora Alicia Sánchez</span>
+                            </div>
+                            <div class="table-cell">
+                                <span>Planta 1, Sala X</span>
+                            </div>
+                            <div class="table-cell">
+                                <span>08:00-16:00</span>
+                            </div>
+                            <div class="table-cell">
+                                <div class="table-row">
+                                <div class="table-cell">
+                                     <button class="button button-cita modify"  title="Modificar Cita"><i class="fa fa-eye mod-icon"> Agenda</i></button>
+                                </div>
+                                <div class="table-cell">
+                                     <button  class="button button-cita delete"  title="Nueva Cita"><i class="fa fa-medkit add-icon">Pedir Cita</i></button>
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Fin tabla medicos-->
+                    <!-- medico seleccionado-->
+                    <!-- Agenda -->
+                    <div id="modify-date" class="modify-date" title="Aqui se cargara la cita que se quiere modificar.">
+                        <div>
+                            <h2>Agenda</h2>
+                        </div>
+                        <div class="table" title="Estos datos solo se muestran cuando se presiona agenda del médico">
+                        
+                        <div class="table-row">
+                            <div class="table-cell">
+                             <label>Name:
+                                 <span> John Smith</span>
+                             </label>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <label>DNI:
+                                    <span> 12345678X</span>
+                                </label>
+                            </div>
+                            <div class="table-cell">
+                                <label>Teléfono:
+                                    <span>
+                                        777553322
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="table-cell">
+                                <label>Conulta/Despacho
+                                    <span>
+                                        Planta 1, Sala A
+                                    </span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        <div>
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required/>
+                        </div>
+                        
+                        <div class="table">
+                            <div class="table-row">
+                                <div class="table-head">
+                                    <span>Hora</span>
+                                </div>
+                                <div class="table-head">
+                                    <span>Paciente</span>
+                                </div>
+                                <div class="table-head">
+                                    <span>Historia Clínica</span>
+                                </div>
+                                <div class="table-head">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <span>14:45</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span>  María Pérez González</span>
+                                </div>
+                                <div class="table-cell">
+                                    <a href="">03456</a>
+                                </div>
+                                 <div class="table-cell">
+                                <div class="table-row">
+                                <div class="table-cell">
+                                     <button  class="button button-cita modify"  title="Modificar Cita"><i class="fa fa-edit mod-icon"></i></button>
+                                </div>
+                                
+                                <div class="table-cell">
+                                     <button  class="button button-cita delete"  title="Eliminar Cita"><i class="fa fa-eraser del-icon"></i></button>
+                                </div>
+                                
+                                </div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <span>15:00</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span> Elvira Camacho Ruíz</span>
+                                </div>
+                                <div class="table-cell">
+                                    <a href="">04256</a>
+                                </div>
+                                 <div class="table-cell">
+                                <div class="table-row">
+                                <div class="table-cell">
+                                     <button  class="button button-cita modify"  title="Modificar Cita"><i class="fa fa-edit mod-icon"></i></button>
+                                </div>
+                                
+                                <div class="table-cell">
+                                     <button  class="button button-cita delete"  title="Eliminar Cita"><i class="fa fa-eraser del-icon"></i></button>
+                                </div>
+                                
+                                </div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <span>15:15</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span> Pedro Flores Serrano</span>
+                                </div>
+                                <div class="table-cell">
+                                    <a href="">03681</a>
+                                </div>
+                                 <div class="table-cell">
+                                <div class="table-row">
+                                <div class="table-cell">
+                                     <button  class="button button-cita modify"  title="Modificar Cita"><i class="fa fa-edit mod-icon"></i></button>
+                                </div>
+                                
+                                <div class="table-cell">
+                                     <button  class="button button-cita delete"  title="Eliminar Cita"><i class="fa fa-eraser del-icon"></i></button>
+                                </div>
+                                
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div>
+                            <button id="back" class="button button-cita back">Cancelar</i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Accion: anular cita -->
+                    <div id="delete-date" class="delete-date" title="Aquí se cargara la cita que se quiere eliminar.">
+                        <div>
+                            <h2>Anular Cita</h2>
+                        </div>
+                        <div>
+                            <h1>Otra vez la informacion completa del paciente.</h1>
+                        </div>
+                        <div>
+                            <div>
+                            <button  class="button button-cita back">Cancelar</i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                
+            
+            
+            
+            <div class="footer">
+                <p>Your health</p>
+                <img src="cc.png">
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="gestioncitas.js"></script>
+     
+    </body>
+</html>

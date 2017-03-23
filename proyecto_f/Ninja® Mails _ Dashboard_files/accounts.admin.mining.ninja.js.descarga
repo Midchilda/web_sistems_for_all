@@ -1,0 +1,46 @@
+    function loadAccounts(index){
+
+         $.ajax({
+              type: "GET",
+              url: CEUserver+"/contactme/rest/metrics/accounts/"+index+"/BECOMEANINJA",
+              contentType: "application/json",
+              async:true,
+              success: function(data){
+
+                if(data.code == 1){
+
+                    //Load List   
+                    $("#accountsTableContent tr").remove();
+
+                    $.each(data.list, function(index, account) {
+
+
+                        $('#accountsTableContent').append(
+
+
+                            "<tr>"+
+                                "<td>"+ account.accountId +"</td>"+
+                                "<td>"+ account.companyId +"</td>"+
+                                "<td>"+ account.name +"</td>"+
+                                "<td>"+ account.status +"</td>"+
+                                "<td>"+ account.date +"</td>"+
+                                "<td id='accountemails_"+account.accountId+"'><span>Unknown</span></td>"+
+                                "<td>"+ account.provider +"</td>"+
+                                "<td>"+ account.cost +" € </td>"+
+                            "</tr>"
+                        ); 
+
+                        var emails = account.emails;
+                        iterateEmails(emails,account.accountId);        
+                    });
+                    
+                    $("#ninjamailsTableContent td").tooltip();
+                }
+            },
+        
+            }).fail(function(){
+
+                warningNotification();
+
+            });        
+    }

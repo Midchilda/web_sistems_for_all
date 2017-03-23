@@ -1,0 +1,219 @@
+    function loadBlacklist(){
+
+         $.ajax({
+              type: "GET",
+              url: CEUserver+"/contactme/rest/metrics/blacklist/BECOMEANINJA",
+              contentType: "application/json",
+              async:true,
+              success: function(data){
+
+                if(data.code == 1){
+
+                    //Load List   
+                    $("#blacklistTableContent tr").remove();
+
+                    $.each(data.list, function(index, black) {
+
+                        $('#blacklistTableContent').append(
+
+                            "<tr>"+
+                                "<td><a id='"+black.id+"' class='btn btn-danger removeBlackClass' style='padding:3px'><i class='fa fa-trash'></i></a> &nbsp;"+ black.id +"</td>"+
+                                "<td>"+ black.companyName +"</td>"+
+                                "<td>"+ black.domain +"</td>"+
+                                "<td>"+ black.title +"</td>"+
+                                "<td>"+ black.provider +"</td>"+
+                            "</tr>"
+                        );  
+
+                        $(".removeBlackClass").click(function() {
+                            var id = $(this).attr('id');
+                            removeBlackWebsite(id);
+                        });
+
+
+                    });
+                }
+            },
+        
+            }).fail(function(){
+
+                warningNotification();
+
+            });
+    }
+
+    function loadPotentialblacklist(){
+
+         $.ajax({
+              type: "GET",
+              url: CEUserver+"/contactme/rest/blacklist/potential/BECOMEANINJA",
+              contentType: "application/json",
+              async:true,
+              success: function(data){
+
+                if(data.code == 1){
+
+                    //Load List   
+                    $("#potentialblacklistTableContent tr").remove();
+
+                    $.each(data.list, function(index, black) {
+
+                        $('#potentialblacklistTableContent').append(
+
+                            "<tr>"+
+                                "<td>"+ black.domain +"</td>"+
+                                "<td>"+ black.times +"</td>"+
+                            "</tr>"
+                        );  
+
+                    });
+                }
+            },
+        
+            }).fail(function(){
+
+                warningNotification();
+
+            });
+    }
+
+    function addnewblack(toSearch){
+
+         $.ajax({
+              type: "GET",
+              url: CEUserver+"/contactme/rest/blacklist/add/"+toSearch+"/BECOMEANINJA",
+              contentType: "application/json",
+              async:true,
+              success: function(data){
+
+                    //Load List   
+                    successNotification("Added");
+                    loadBlacklist();
+                    $("#newblackwebsiteInput").val("");
+            },
+        
+            }).fail(function(){
+
+                warningNotification();
+
+            });
+
+    }
+
+    function removeBlackWebsite(websiteId){
+
+         $.ajax({
+              type: "GET",
+              url: CEUserver+"/contactme/rest/websites/removeblack/"+websiteId,
+              contentType: "application/json",
+              async:true,
+              success: function(data){
+
+                    //Load List   
+                    successNotification("Deleted");
+                    loadBlacklist();
+            },
+        
+            }).fail(function(){
+
+                warningNotification();
+
+            });
+
+    }
+
+        function checkcompanies(domain){
+
+         $.ajax({
+              type: "GET",
+              url: CEUserver+"/contactme/rest/blacklist/getcompanies/"+domain+"/BECOMEANINJA",
+              contentType: "application/json",
+              async:true,
+              success: function(data){
+
+                    //Load Modal List   
+                  if(data.code == 1){
+
+                    $("#checkCompaniesModal").modal("show");
+                    $("#checkmodaltittle").html(domain);
+
+                    //Load List   
+                    $("#checkcompaniesTableContent tr").remove();
+
+                    $.each(data.list, function(index, black) {
+
+                        $('#checkcompaniesTableContent').append(
+
+                            "<tr id='"+black.companyId+"'>"+                    
+                                "<td class='check-mail'>" +
+                                  "<input type='checkbox' class='i-checks'>" +
+                                "</td>" +
+                                "<td>"+ black.companyId +"</td>"+
+                                "<td>"+ black.companyName +"</td>"+
+                            "</tr>"
+                        );  
+
+                    });
+                }
+
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+
+            },
+        
+            }).fail(function(){
+
+                warningNotification();
+
+            });
+
+    }
+
+        $("#checkallcompaniesButton").click(function(){
+
+            if($("#checkallcompaniesButton").hasClass('check')){
+
+                $(".icheckbox_square-green").removeClass('checked');
+                $("#checkallcompaniesButton").removeClass('check');
+
+
+            }else{
+
+                $(".icheckbox_square-green").addClass('checked');
+                $("#checkallcompaniesButton").addClass('check');
+
+            }
+
+          });
+
+              //Remove Button (in modal)
+      $("#removeincompaniesButton").click(function(){
+
+        $('.checked').each(function(i, obj) {
+            
+            var id = $(this).parent().parent().attr("id");
+            var webdomain = $("#checkmodaltittle").html();
+
+            $.ajax({
+              type: "GET",
+              url: CEUserver+"/contactme/rest/blacklist/removeincompanies/"+id+"/"+webdomain,
+             // data: JSON.stringify({ "mailId": id }),
+              dataType: "json",
+              contentType: "application/json"
+            }).done(function(){
+
+                  successNotification();
+
+                //var userId = $("#userId").html();
+                //loadNinjaMailsListByUser(userId);
+
+            }).fail(function(){
+
+                warningNotification();
+
+            });
+        });
+
+      });

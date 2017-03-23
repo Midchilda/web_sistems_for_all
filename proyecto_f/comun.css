@@ -1,0 +1,110 @@
+body{
+	background-image: url("fondo.png");
+	background-position: center;
+	background-size: cover;
+	max-height: 100%;
+	max-width: 75%;
+
+}
+/* ---------- MENU -------*/
+.menu ul {
+    list-style-type: none;
+    margin-left: 83.2%;
+    padding: 0px;
+    width: 16%;
+    background-color:#8CD4F2;
+    position: fixed;
+    height: 56.6%;
+    font-size: 120%;
+    opacity: 0.75;
+    border: 1px solid #1E90FF;
+}
+.menu li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #1E90FF;
+}
+.menu li a.active {
+    background-color: #00ccff;
+    color: white;
+}
+
+.menu li a:hover:not(.active) {
+    background-color: #AFEEEE;
+    color: blue;
+}
+
+/*---------- CABECERA -------------*/
+.cabecera{
+ 	height: 200px;
+    width: 130%;
+}
+img.titulo{
+	width: 175px;
+	height: 175px;
+}
+
+.titulo{
+	float: center;
+	margin-left: 30%;
+	margin-top: 0%;
+	width: 40%;
+}
+
+img.avatar{
+	width: 90px;
+	height: 90px;
+}
+
+.avatar{
+	float: right;
+	margin-right: 3%;
+	margin-top: 2%;
+	width: 40%;
+}
+
+p.avatar{
+	float:right;
+	margin-top: 18%;
+	margin-right: -20%;
+}
+
+/*------- CITAS ----------*/
+.citas{
+	margin-left: 42%;
+    display: block;
+}
+table.citas, th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td{
+	padding: 3px 50px;
+}
+
+
+/*------------- PIE ------------*/
+.pie{
+	height: 4em;
+	width: 133.4%;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 0px;
+	margin-top: 400px;
+	margin-left: -1%;
+}
+
+/*margin-left: 83.2%;
+    padding: 0px;
+    width: 16%;
+    background-color:#8CD4F2;
+    position: fixed;
+    height: 56.6%;
+    font-size: 120%;
+    opacity: 0.75;
+    border: 1px solid #1E90FF;
+}*/

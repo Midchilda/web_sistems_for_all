@@ -1,0 +1,111 @@
+    function addnewSat(mail,password,limit,smtpHost,smtpPort,sockectFactoryPort,popimapHost){
+
+            $.ajax({
+              type: "POST",
+              url:"http://"+validationserver+"/ValidationManager/rest/servers/new",
+              data: JSON.stringify({ "mail": mail, "password" : password, "limit" : limit, "smtpHost" : smtpHost, "smtpPort" : smtpPort, "sockectFactoryPort" : sockectFactoryPort, "popimapHost" : popimapHost}),
+              dataType: "json",
+              contentType: "application/json",
+              async: false,
+              crossDomain: true,
+              success: function(data) {
+                  
+                if(data.code == 1){
+
+                    successNotification("Added ;)");
+                    loadSatServers();
+                    $("#newSat_modal").modal("hide");
+                }
+
+                if(data.code == 0){
+
+                    errorNotification(data.reason);
+                }
+
+                },
+
+            }).fail(function(){
+
+                warningNotification();
+
+            });
+
+    }
+
+    function loadSatServers(){
+
+         $.ajax({
+              type: "GET",
+              url: validationserver+"/ValidationManager/rest/servers/checkall",
+              contentType: "application/json",
+              async:true,
+              success: function(data){
+
+                if(data.code == 1){
+
+                    //Load List   
+                    $("#satServersTableContent tr").remove();
+
+                    $.each(data.serversStatus, function(index, server) {
+
+                        if(server.active == true){
+                            active = "<i class='fa fa-check text-navy'></i>";
+                        }else{
+                            active = "<i class='fa fa-times text-navy' style='color:#A94442'></i>";
+                        }
+
+                        $('#satServersTableContent').append(
+
+
+                            "<tr>"+
+                                "<td>"+ server.server +"</td>"+
+                                "<td>"+ active +"</td>"+
+                                "<td>"+ server.lastCheck +"</td>"+
+                            "</tr>"
+                        ); 
+
+                       // var emails = account.emails;
+                        //iterateEmails(emails,account.accountId);        
+                    });
+                    
+                    //$("#ninjamailsTableContent td").tooltip();
+                }
+            },
+        
+            }).fail(function(){
+
+                warningNotification();
+
+            });        
+    }
+    
+      function cleanInbox(){
+
+         $.ajax({
+              type: "GET",
+              url: validationserver+"/ValidationManager/rest/inboxsatservers/clean",
+              contentType: "application/json",
+              async:true,
+              success: function(data){
+
+                if(data.code == 1){
+
+                    //Load List   
+                 
+
+                   alert("Todo chachi! ;)");
+
+                       // var emails = account.emails;
+                        //iterateEmails(emails,account.accountId);        
+                  
+                    
+                    //$("#ninjamailsTableContent td").tooltip();
+                }
+            },
+        
+            }).fail(function(){
+
+                warningNotification();
+
+            });        
+    }

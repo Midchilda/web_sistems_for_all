@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <title>YourHealth</title>
+        <meta charset="utf-8"/>
+        <link rel="shortcut icon" type="image/x-icon" href="YourHealthIco.ico" />
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+         <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <section>
+            <div class="header">
+                <img class="titulo" src="YourHealth.png">
+                <nav>
+                <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="detalles.html">Detalles</a></li>
+                <li><a href="bocetos.html">Bocetos</a></li>
+                <li><a href="planificación.html">Planificación</a></li>
+                <li><a href="sistemacitas.html">Cita Médica</a></li>
+                <li><a href="miembros.html">Conócenos</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+                </nav>
+            </div>
+        </section>
+        <!--Contenido de las páginas (En todas las páginas)-->
+        <!-- un section es una manera de dividir la pagina por "secciones" de tal modo que podemos dividir el contenido de esta por temas -->
+        <section>
+            <header>
+                <div>
+                    <div>
+                        <h1>
+                            <span>
+                                Citas con especialistas médicos
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+            </header>
+            <!--Paso1-->
+            <fieldset class="pasos" id="paso1">
+                <legend>
+                    <h2>
+                        Especialidad/Servicios
+                    </h2>
+                </legend>
+                <div>
+                  
+                    <div>
+                        <h2>
+                            <span>
+                                Selecciona Servicio
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="service">
+                        <div>
+                            <label>
+                                <h3>
+                                    <span>
+                                        Especialidad
+                                    </span>
+                                </h3>
+                            </label>
+                            <div>
+                                <!--Se cargarian las opciones de la base de datos,cuando la web sea mas dinamica -->
+                                <select>
+                                    <option>
+                                        Chequeos medicos
+                                    </option>
+                                    <option>
+                                        Cardiologia
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label>
+                                <h3>
+                                    <span>
+                                        Servicios
+                                    </span>
+                                </h3>
+                            </label>
+                            <div>
+                                <select>
+                                    <option>
+                                        Esto depende de la especialidad seleccionada.
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <button id="to2" class="button-cita">
+                                    Siguiente
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <!--Paso2-->
+            <fieldset class="pasos" id="paso2">
+                <legend>
+                    Resumen
+                </legend>
+                <div>
+                    <div>
+                        Resumen de servicios solicitados.
+                    </div>
+                </div>
+                <div class="service">
+                    <div>
+                        <div>
+                            <button id="backto1" class="button-cita">
+                                Volver
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div> 
+                            <button id="to3" class="button-cita">
+                                Siguiente
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <!--Paso3-->
+            <fieldset class="pasos" id="paso3">
+                <legend>
+                    Fecha y hora
+                </legend>
+                <div>
+                    <div>
+                        <h1>
+                            Aqui va un calendario muy guay y tal.
+                        </h1>
+                    </div>
+                </div>
+                <div class="service">
+                    <div>
+                        <div>
+                            <button id="backto2" class="button-cita">
+                                Volver
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <button id="finish" class="button-cita">
+                                Siguiente
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Horario
+                </legend>
+                <div>
+                    <label>
+                        24H
+                    </label>
+                    <div>
+                        <a href="/sistemas_web/pr_1/plantillaV2.html">
+                            muestate satanas
+                        </a>
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+        <!--Pie de las páginas (En todas las páginas)-->
+        <footer>
+            <div class="footer">
+                <p>Your health</p>
+                <img src="cc.png">
+            </div>
+        </footer>
+       
+    </body>
+</html>
+

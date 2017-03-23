@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        </title>
+        <link href="css/informe.css" rel="stylesheet" type="text/css"/>
+        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <div class="cabecera">
+                <div class="avatar">
+                    <!--<a href = "Datos.html">-->
+                    <img class="avatar" src="img/usuario.png">
+                        <!--Log out</a>-->
+                        <p class="avatar">
+                            Hola "usuario "
+                            <a href="desconectarse.html">
+                                Desconectate
+                            </a>
+                        </p>
+                    </img>
+                </div>
+                <div class="titulo">
+                    <!--<a href="index.html">-->
+                    <img class="titulo" src="img/YourHealth.png">
+                        <!--</a>-->
+                    </img>
+                </div>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                Conócenos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Nuestro Centro
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Cuadro Médico
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Servicios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Atención Primaria
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Actividades
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Lista Quirúrjica
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                + Información
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="contenedor">
+            <div class="container">
+                <h1>
+                    INFORME DE CONSULTA
+                </h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>
+                            Datos del Centro
+                        </h1>
+                        <p>
+                            Paseo de la Castellana, 261
+                        </p>
+                        <p>
+                            28046,Madrid
+                        </p>
+                        <p>
+                            Telf: 91-7277000
+                        </p>
+                        <div class="row">
+                            <h3>
+                                <p>
+                                    Seleciona tu Informe
+                                </p>
+                            </h3>
+                            <select>
+                                <option>
+                                    Informe de Urgencias
+                                </option>
+                                <option>
+                                    Informe de Maternidad
+                                </option>
+                                <option>
+                                    Informe de Urgencias
+                                </option>
+                                <option>
+                                    Informe de Urgencias
+                                </option>
+                            </select>
+                            <p>
+                                <label>
+                                    Fecha del informe
+                                </label>
+                                <input name="fecha" type="date">
+                                </input>
+                                <label>
+                                    Hora del Informe
+                                </label>
+                                <input name="hora" type="time">
+                                </input>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h1>
+                            Datos Personales
+                        </h1>
+                        <p>
+                            <label>
+                                NºHC:
+                            </label>
+                            <input id="codigo2" name="text" type="historia"/>
+                        </p>
+                        <p>
+                            <label>
+                                NOMBRE:
+                            </label>
+                            <input id="cajas" name="text" type="nombre"/>
+                        </p>
+                        <p>
+                            <label>
+                                1º APELLIDO:
+                            </label>
+                            <input id="cajas" name="text" type="1ºapellido"/>
+                        </p>
+                        <p>
+                            <label>
+                                2º APELLIDO:
+                            </label>
+                            <input id="cajas" name="text" type="2ºapellido"/>
+                        </p>
+                        <p>
+                            <label>
+                                Telf:
+                            </label>
+                            <input max="15" min="9" name="text" type="telefono"/>
+                        </p>
+                        <p>
+                            <label>
+                                FECHA DE NACIMIENTO:
+                            </label>
+                            <input name="fecha" type="date"/>
+                            <label>
+                                SEXO
+                            </label>
+                            <select>
+                                <option>
+                                    HOMBRE
+                                </option>
+                                <option>
+                                    MUJER
+                                </option>
+                            </select>
+                        </p>
+                        <p>
+                            <label>
+                                DOMICILIO:
+                            </label>
+                            <input name="text" type="calle"/>
+                        </p>
+                        <p>
+                            <label>
+                                CP:
+                            </label>
+                            <input id="codigo" name="cod.postal" type="text"/>
+                        </p>
+                        <p>
+                            <label>
+                                PROVINCIA
+                            </label>
+                            <input id="cajas" name="provincia" type="text"/>
+                        </p>
+                        <p>
+                            <label>
+                                POBLACIÓN
+                            </label>
+                            <input id="cajas" name="text" type="Poblacion"/>
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <p>
+                            <h3>
+                                MOTIVO DE LA CONSULTA
+                            </h3>
+                        </p>
+                        <textarea id="texto">
+                        </textarea>
+                        <p>
+                            <h3>
+                                ANTECEDENTES PERSONALES
+                            </h3>
+                        </p>
+                        <textarea id="texto">
+                        </textarea>
+                        <p>
+                            <label>
+                                Reacciones Adversas a Medicamentos
+                            </label>
+                            <input name="medicamentos" type="text"/>
+                        </p>
+                        <p>
+                            <h3>
+                                HISTORIA ACTUAL
+                            </h3>
+                        </p>
+                        <textarea id="texto">
+                        </textarea>
+                        <p>
+                            <h3>
+                                EXPLORACION FÍSICA
+                            </h3>
+                        </p>
+                        <textarea id="texto">
+                        </textarea>
+                        <p>
+                            <h3>
+                                RX
+                            </h3>
+                        </p>
+                        <textarea id="texto">
+                        </textarea>
+                        <p>
+                            <h3>
+                                DIAGNÓSTICO
+                            </h3>
+                        </p>
+                        <textarea id="texto">
+                        </textarea>
+                        <p>
+                            <h3>
+                                TRATAMIENTO
+                            </h3>
+                        </p>
+                        <textarea id="texto">
+                        </textarea>
+                        <div id="botones">
+                            <button class="btn btn-primary" type="button">
+                                Guardar
+                            </button>
+                            <button class="btn btn-primary" type="button">
+                                Enviar
+                            </button>
+                            <p>
+                                <div class="box">
+                                    <a class="button" href="#popup2">
+                                        Imprimir
+                                    </a>
+                                </div>
+                                <div class="overlay" id="popup2">
+                                    <div class="popup">
+                                        <h2>
+                                            Imprimiendo PDF
+                                        </h2>
+                                        <a class="close" href="#">
+                                            ×
+                                        </a>
+                                        <div class="content">
+                                            <label>
+                                                Cargando...
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="pie">
+                <p>
+                    pie de pagina
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
